@@ -82,8 +82,6 @@ p {
   border: 0;
   padding: 0;
 
-  white-space: nowrap;
-  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -535,7 +533,7 @@ p {
   border-radius: 4px;
   border: 1px solid var(--white-background);
 
-  filter: drop-shadow(0px 4px 4px 0px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 
   background-color: transparent;
   color: var(--white-text);
@@ -584,7 +582,7 @@ p {
   background-color: var(--pressed-state);
 }
 
-.anotersvgbuttonclassFORONEMARGIN {
+.anotersvgbuttonclassforonemargin {
   margin-left: 16px;
 }
 
@@ -827,9 +825,8 @@ p {
 
   font-size: 12px;
   font-family: Roboto;
-  font-style: 1.17;
   font-weight: 400;
-  line-height: 14px;
+  line-height: 1.17;
   letter-spacing: 0.48px;
 }
 
@@ -840,6 +837,7 @@ p {
   border-radius: 4px;
   outline: transparent;
   border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
+  background-color: transparent;
 
   transition: border-color var(--transition);
 }
@@ -855,7 +853,7 @@ p {
 }
 
 .modal-button {
-  min-width: 164px;
+  min-width: 169px;
   height: 56px;
   margin-left: auto;
   margin-right: auto;
@@ -917,7 +915,7 @@ p {
   font-family: Roboto;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.17;
   letter-spacing: 0.48px;
 }
 
@@ -937,18 +935,21 @@ p {
   border-radius: 2px;
   border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
 
+  color: transparent;
   fill: transparent;
 
   transition: background-color var(--transition), border var(--transition),
     fill var(--transition);
 }
 
-.checkbox:checked + .form-item-checkbox {
+.checkbox:checked ~ .checkbox-icon {
   background-color: var(--pressed-state);
   fill: var(--secondary-background-color);
   border: none;
 }
-
+.checkbox-svg {
+  fill: currentColor;
+}
 .why-div-checkbox {
   margin-bottom: 24px;
 }
