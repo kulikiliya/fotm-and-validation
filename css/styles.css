@@ -942,7 +942,7 @@ p {
 }
 /* !!!!!!!!!!!!!!!!!!!!!!!! */
 
-.checkbox:checked + .form-item-checkbox .checkbox-svg {
+.checkbox:checked + .form-item-checkbox > .checkbox-svg {
   background-color: var(--pressed-state);
   fill: var(--secondary-background-color);
   border: none;
