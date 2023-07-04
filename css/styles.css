@@ -534,7 +534,8 @@ p {
   padding-left: 16px;
   border-radius: 4px;
   border: 1px solid var(--white-background);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+  filter: drop-shadow(0px 4px 4px 0px rgba(0, 0, 0, 0.15));
 
   background-color: transparent;
   color: var(--white-text);
@@ -558,7 +559,7 @@ p {
   padding: 8px 24px;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+
   border-color: transparent;
   border-radius: 4px;
   border: none;
@@ -570,7 +571,7 @@ p {
 
   text-align: center;
   font-size: 16px;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
   line-height: 1.5;
@@ -581,6 +582,10 @@ p {
 .footer-button:hover,
 .footer-button:focus {
   background-color: var(--pressed-state);
+}
+
+.anotersvgbuttonclassFORONEMARGIN {
+  margin-left: 16px;
 }
 
 /* portfolio */
@@ -850,7 +855,7 @@ p {
 }
 
 .modal-button {
-  width: 164px;
+  min-width: 164px;
   height: 56px;
   margin-left: auto;
   margin-right: auto;
@@ -859,6 +864,7 @@ p {
 
   border-color: transparent;
   border-radius: 4px;
+  border: none;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
   background-color: var(--iris, #4d5ae5);
@@ -868,11 +874,12 @@ p {
   color: var(--white, #fff);
   text-align: center;
   font-size: 16px;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.64px;
+  cursor: pointer;
 }
 
 .modal-button:hover,
@@ -920,11 +927,6 @@ p {
 
 /* ЧЕК-БОКС */
 
-.checkbox:checked + .checkbox-icon {
-  background-color: var(--pressed-state);
-  border: none;
-}
-
 .checkbox-icon {
   display: inline-flex;
   align-items: center;
@@ -936,6 +938,15 @@ p {
   border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
 
   fill: transparent;
+
+  transition: background-color var(--transition), border var(--transition),
+    fill var(--transition);
+}
+
+.checkbox:checked + .form-item-checkbox {
+  background-color: var(--pressed-state);
+  fill: var(--secondary-background-color);
+  border: none;
 }
 
 .why-div-checkbox {
@@ -951,6 +962,10 @@ p {
   font-family: Roboto;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.17;
   letter-spacing: 0.48px;
+}
+
+.policy-link {
+  color: var(--primary-brand);
 }
