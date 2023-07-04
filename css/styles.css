@@ -517,10 +517,14 @@ p {
   margin-left: 80px;
 }
 
+.footer-form {
+  display: flex;
+  gap: 24px;
+}
+
 .footer-email {
   display: flex;
   align-items: center;
-  gap: 24px;
 }
 
 .footer-input {
