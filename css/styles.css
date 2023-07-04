@@ -941,8 +941,13 @@ p {
   transition: background-color var(--transition), border var(--transition),
     fill var(--transition);
 }
+/* !!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!! */
 
-.checkbox:checked ~ .checkbox-icon {
+.checkbox:checked + .form-item-checkbox .checkbox-svg {
   background-color: var(--pressed-state);
   fill: var(--secondary-background-color);
   border: none;
@@ -955,9 +960,6 @@ p {
 }
 
 .form-item-checkbox {
-  display: flex;
-  justify-content: flex-start;
-
   color: var(--lightslate);
   font-size: 12px;
   font-family: Roboto;
