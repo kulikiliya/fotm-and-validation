@@ -935,16 +935,11 @@ p {
   border-radius: 2px;
   border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
 
-  color: transparent;
   fill: transparent;
 
   transition: background-color var(--transition), border var(--transition),
     fill var(--transition);
 }
-/* !!!!!!!!!!!!!!!!!!!!!!!! */
-/* !!!!!!!!!!!!!!!!!!!!!!!! */
-/* !!!!!!!!!!!!!!!!!!!!!!!! */
-/* !!!!!!!!!!!!!!!!!!!!!!!! */
 /* !!!!!!!!!!!!!!!!!!!!!!!! */
 
 .checkbox:checked + .form-item-checkbox .checkbox-svg {
@@ -952,9 +947,7 @@ p {
   fill: var(--secondary-background-color);
   border: none;
 }
-.checkbox-svg {
-  fill: currentColor;
-}
+
 .why-div-checkbox {
   margin-bottom: 24px;
 }
