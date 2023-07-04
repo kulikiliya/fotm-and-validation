@@ -502,7 +502,7 @@ p {
   font-size: 16px;
   font-family: Roboto;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.32px;
 }
 
@@ -519,64 +519,64 @@ p {
 
 .footer-email {
   display: flex;
+  align-items: center;
   gap: 24px;
 }
 
 .footer-input {
   display: block;
   width: 264px;
-  height: auto;
-  padding-top: 8px;
+  height: 40px;
   padding-left: 16px;
-  padding-bottom: 8px;
-
   border-radius: 4px;
   border: 1px solid var(--white-background);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
-  background-color: var(--footer-background-color);
-}
+  background-color: transparent;
+  color: var(--white-text);
 
-.footer-input::placeholder {
-  color: var(--white, #fff);
   font-size: 12px;
   font-family: Roboto;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.48px;
+}
+
+.footer-input::placeholder {
+  color: var(--white, #fff);
 }
 
 .footer-button {
   display: flex;
   min-width: 165px;
-  min-height: 40px;
+  height: 40px;
   padding: 8px 24px;
   justify-content: center;
   align-items: center;
   gap: 16px;
   border-color: transparent;
   border-radius: 4px;
+  border: none;
 
+  color: var(--white, #fff);
   background-color: var(--primary-brand);
 
   transition: background-color var(--transition);
+
+  text-align: center;
+  font-size: 16px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+  cursor: pointer;
 }
 
 .footer-button:hover,
 .footer-button:focus {
   background-color: var(--pressed-state);
-}
-.button-text {
-  color: var(--white, #fff);
-  text-align: center;
-
-  font-size: 16px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.64px;
 }
 
 /* portfolio */
@@ -783,6 +783,7 @@ p {
 .modal-h {
   display: flex;
   justify-content: center;
+  margin-bottom: 16px;
 
   color: var(--navyblue, #2e2f42);
 
@@ -803,8 +804,24 @@ p {
   margin-top: 16px;
 }
 
-.form-item:nth-child(-n + 3) {
+.why-div {
   margin-bottom: 8px;
+}
+.why-div-textarea {
+  margin-bottom: 16px;
+}
+
+.form-item {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--lightslate, #8e8f99);
+
+  font-size: 12px;
+  font-family: Roboto;
+  font-style: 1.17;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.48px;
 }
 
 .form-item-imput {
@@ -812,6 +829,7 @@ p {
   height: 40px;
   padding-left: 38px;
   border-radius: 4px;
+  outline: transparent;
   border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
 
   transition: border-color var(--transition);
@@ -827,25 +845,9 @@ p {
   fill: var(--primary-brand);
 }
 
-.form-item-desc {
-  display: block;
-  width: auto;
-  margin-bottom: 4px;
-
-  color: var(--lightslate);
-
-  font-size: 12px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 0.12px;
-}
-
 .modal-button {
   width: 164px;
   height: 56px;
-  margin-top: 24px;
   margin-left: auto;
   margin-right: auto;
 
@@ -890,59 +892,61 @@ p {
   resize: none;
   width: 100%;
   height: 120px;
+  padding: 8px 16px;
   border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
   border-radius: 4px;
+  outline: transparent;
+
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
 
   transition: border-color var(--transition);
-}
-
-.form-item-textarea::placeholder {
-  padding-top: 8px;
-  padding-left: 16px;
-
-  color: var(--navyblue-modal, rgba(46, 47, 66, 0.4));
 
   font-size: 12px;
   font-family: Roboto;
   font-style: normal;
   font-weight: 400;
-  line-height: 14px;
+  line-height: 1.5;
   letter-spacing: 0.48px;
+}
+
+.form-item-textarea::placeholder {
+  color: var(--navyblue-modal, rgba(46, 47, 66, 0.4));
 }
 
 /* ЧЕК-БОКС */
 
 .checkbox:checked + .checkbox-icon {
-  background-image: url(../images/click.svg);
-  background-size: contain;
-  background-origin: border-box;
+  background-color: var(--pressed-state);
+  border: none;
 }
 
 .checkbox-icon {
-  display: inline-block;
-  height: 15px;
-  width: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 16px;
+  width: 16px;
   margin-right: 8px;
   border-radius: 2px;
   border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
 
-  fill: var(--white-background);
+  fill: transparent;
+}
+
+.why-div-checkbox {
+  margin-bottom: 24px;
 }
 
 .form-item-checkbox {
   display: flex;
   justify-content: flex-start;
-  margin-top: 16px;
 
-  color: #8e8f99;
+  color: var(--lightslate);
   font-size: 12px;
   font-family: Roboto;
   font-style: normal;
   font-weight: 400;
-  line-height: 14px;
+  line-height: 1.5;
   letter-spacing: 0.48px;
-}
-
-.checkbox {
-  appearance: none;
 }
